@@ -1,0 +1,292 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", "Montserrat", sans-serif;
+}
+
+body {
+  text-transform: none;
+}
+
+/* GLOBAL BODY */
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #0c0c24;
+  color: #ffffff;
+  line-height: 1.65;
+}
+
+main {
+  flex: 1;
+}
+
+footer {
+  margin-top: auto;
+}
+
+/* LAYOUT CONTAINER */
+.container {
+  width: 90%;
+  max-width: 880px;
+  margin: 0 auto;
+}
+
+/* ==========================================================
+   HERO SECTION (LANDING PAGE)
+   ========================================================== */
+
+body.landing {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 6rem;
+  min-height: 100vh;
+
+  background: radial-gradient(circle at 30% 20%, #4b3aa4 0%, #262660 30%, #0e0e29 85%);
+  background-attachment: fixed;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.title {
+  font-size: 3.8rem;
+  font-weight: 700;
+  color: #aab4ff;
+  margin-bottom: 1.2rem;
+}
+
+.tagline {
+  font-size: 1.45rem;
+  opacity: 0.9;
+  margin-bottom: 2rem;
+}
+
+.about {
+  font-size: 1.2rem;
+  max-width: 780px;
+  margin: 0 auto 2.4rem auto;
+  opacity: 0.9;
+  line-height: 1.75;
+}
+
+.founders {
+  font-size: 1.15rem;
+  max-width: 780px;
+  margin: 2.4rem auto 4rem auto;
+  opacity: 0.9;
+  line-height: 1.75;
+}
+
+.cta-button,
+a.cta-button {
+  display: inline-block;
+  background: #aab4ff;
+  color: #1f1f4d;
+  padding: 16px 38px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.25s ease;
+}
+
+.cta-button:hover {
+  background: #ffffff;
+  color: #0f0f2a;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+/* ==========================================================
+   PILLARS SECTION
+   ========================================================== */
+
+.pillars {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin-top: 3rem;
+  margin-bottom: 4rem;
+}
+
+.pillar {
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.pillar h3 {
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: #aab4ff;
+  margin-bottom: 0.6rem;
+}
+
+.pillar p {
+  opacity: 0.85;
+  font-size: 1.05rem;
+  max-width: 620px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+@media (min-width: 700px) {
+  .pillars {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 3rem;
+  }
+
+  .pillar {
+    text-align: left;
+    flex: 1;
+  }
+
+  .pillar p {
+    margin: 0;
+    text-align: left;
+  }
+}
+
+/* ==========================================================
+   CTA STRIP
+   ========================================================== */
+
+.cta-strip {
+  margin: 4rem auto;
+  padding: 3.5rem 1.5rem;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 14px;
+  text-align: center;
+  width: 90%;
+  max-width: 780px;
+  backdrop-filter: blur(4px);
+}
+
+.cta-strip h2 {
+  font-size: 1.9rem;
+  font-weight: 600;
+  margin-bottom: 1.4rem;
+}
+
+/* ==========================================================
+   CONTACT PAGE
+   ========================================================== */
+
+body.contact-page {
+  background: radial-gradient(circle at 60% 10%, #3b2f66 0%, #1f1f4d 35%, #0d0d26 85%);
+  min-height: 100vh;
+  padding-top: 6rem;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-container {
+  width: 90%;
+  max-width: 700px;
+}
+
+.contact-intro {
+  font-size: 1.15rem;
+  opacity: 0.85;
+  margin-bottom: 2rem;
+  line-height: 1.7;
+}
+
+/* Form fields */
+form input,
+form textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  margin-bottom: 1.4rem;
+  font-size: 1rem;
+}
+
+/* Barrier group */
+.group {
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 10px;
+  margin-bottom: 1.8rem;
+}
+
+.group legend {
+  padding: 0.75rem 1rem;
+  background: rgba(255,255,255,0.06);
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  font-weight: 600;
+  border-radius: 10px 10px 0 0;
+}
+
+/* checkboxes */
+.check {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.check:hover {
+  background: rgba(255,255,255,0.08);
+}
+
+.check input {
+  width: 18px;
+  height: 18px;
+  accent-color: #aab4ff;
+}
+
+.check:has(input:checked) {
+  background: #ffffff;
+  color: #1f1f4d;
+}
+
+/* THANK YOU */
+.thankyou {
+  background: rgba(255,255,255,0.07);
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.1);
+  padding: 2.5rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.thankyou h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #aab4ff;
+}
+
+.hidden {
+  display: none;
+}
+
+.back-link {
+  text-align: center;
+  margin-top: 2rem;
+  opacity: 0.7;
+}
+
+/* ==========================================================
+   FOOTER
+   ========================================================== */
+
+footer {
+  text-align: center;
+  opacity: 0.5;
+  font-size: 0.9rem;
+  margin-top: 5rem;
+  padding-bottom: 2rem;
+}

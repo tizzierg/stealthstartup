@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>contact agentic</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="contact-page">
+
+  <div class="contact-container container">
+
+    <h1 class="title">get in touch</h1>
+
+    <p class="contact-intro">
+      we'd love to understand how we can help you — tell us a little bit about your business.
+    </p>
+
+    <!-- THANK YOU MESSAGE -->
+    <div id="thankyou" class="thankyou hidden">
+      <h2>thank you.</h2>
+      <p>Max or Tizzie will be in touch shortly.</p>
+    </div>
+
+    <!-- CONTACT FORM -->
+    <form action="/api/contact" 
+          method="POST" 
+          id="contactForm" 
+          onsubmit="submitForm(event)">
+
+      <label>your name</label>
+      <input type="text" name="name" required>
+
+      <label>email</label>
+      <input type="email" name="email" required>
+
+      <fieldset class="group">
+        <legend>what has prevented you from adopting ai?</legend>
+
+        <label class="check">
+          <input type="checkbox" name="barriers[]" value="lack of expertise">
+          <span>lack of expertise</span>
+        </label>
+
+        <label class="check">
+          <input type="checkbox" name="barriers[]" value="high cost">
+          <span>high cost</span>
+        </label>
+
+        <label class="check">
+          <input type="checkbox" name="barriers[]" value="uncertainty on roi">
+          <span>uncertainty on roi</span>
+        </label>
+
+        <label class="check">
+          <input type="checkbox" name="barriers[]" value="data and privacy concerns">
+          <span>data and privacy concerns</span>
+        </label>
+
+        <label class="check">
+          <input type="checkbox" name="barriers[]" value="just dont see the value">
+          <span>just don’t see the value</span>
+        </label>
+      </fieldset>
+
+      <label>message</label>
+      <textarea name="message" rows="5" required></textarea>
+
+      <button type="submit" class="cta-button">send message</button>
+    </form>
+
+    <p class="back-link">
+      <a href="index.html" style="color:white; text-decoration:none;">back to agentic</a>
+    </p>
+
+  </div>
+
+<script>
+async function submitForm(event) {
+  event.preventDefault();
+
+  const form = document.getElementById("contactForm");
+  const data = Object.fromEntries(new FormData(form).entries());
+
+  const response = await fetch("/api/contact", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data)
+  });
+
+  if (response.ok) {
+    form.classList.add("hidden");
+    document.getElementById("thankyou").classList.remove("hidden");
+  } else {
+    alert("something went wrong. please try again.");
+  }
+}
+</script>
+
+</body>
+</html>
+``
