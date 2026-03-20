@@ -1,103 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>contact agentic</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>contact cultivate.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body class="contact-page">
+  <div class="page-noise"></div>
 
-  <div class="contact-container container">
+  <header class="site-header container">
+    <a class="brand" href="index.html">cultivate.</a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="index.html#friction">where teams get stuck</a>
+      <a href="index.html#why-on-site">why on-site</a>
+      <a href="contact.html">contact</a>
+    </nav>
+  </header>
 
-    <h1 class="title">get in touch</h1>
+  <main class="contact-layout container">
+    <section class="contact-copy">
+      <p class="eyebrow">contact</p>
+      <h1 class="title">tell us what kind of OpenClaw setup you need.</h1>
+      <p class="contact-intro">
+        If you are exploring an on-site OpenClaw installation for your business, send a few details
+        about your current setup, the risks you are trying to avoid, and the workflows you want to improve.
+      </p>
 
-    <p class="contact-intro">
-      we'd love to understand how we can help you — tell us a little bit about your business.
-    </p>
+      <div class="contact-notes">
+        <article>
+          <span>what to expect</span>
+          <p>A short response on whether your business is a good fit for an on-site OpenClaw installation and what the next step should be.</p>
+        </article>
+        <article>
+          <span>best fit</span>
+          <p>Edinburgh businesses that want private AI capability, practical installation help, and a system staff can actually use.</p>
+        </article>
+      </div>
+    </section>
 
-    <!-- THANK YOU MESSAGE -->
-    <div id="thankyou" class="thankyou hidden">
-      <h2>thank you.</h2>
-      <p>Max or Tizzie will be in touch shortly.</p>
-    </div>
+    <section class="contact-panel">
+      <div id="thankyou" class="thankyou hidden">
+        <h2>thank you.</h2>
+        <p>Max or Tizzie will be in touch shortly.</p>
+      </div>
 
-    <!-- CONTACT FORM -->
-    <form action="/api/contact" 
-          method="POST" 
-          id="contactForm" 
-          onsubmit="submitForm(event)">
+      <form action="/api/contact" method="POST" id="contactForm" onsubmit="submitForm(event)">
+        <label for="name">your name</label>
+        <input id="name" type="text" name="name" required />
 
-      <label>your name</label>
-      <input type="text" name="name" required>
+        <label for="email">email</label>
+        <input id="email" type="email" name="email" required />
 
-      <label>email</label>
-      <input type="email" name="email" required>
+        <fieldset class="group">
+          <legend>what has slowed down your OpenClaw or on-site AI rollout?</legend>
 
-      <fieldset class="group">
-        <legend>what has prevented you from adopting ai?</legend>
+          <label class="check">
+            <input type="checkbox" name="barriers[]" value="lack of expertise" />
+            <span>lack of expertise</span>
+          </label>
 
-        <label class="check">
-          <input type="checkbox" name="barriers[]" value="lack of expertise">
-          <span>lack of expertise</span>
-        </label>
+          <label class="check">
+            <input type="checkbox" name="barriers[]" value="high cost" />
+            <span>high cost</span>
+          </label>
 
-        <label class="check">
-          <input type="checkbox" name="barriers[]" value="high cost">
-          <span>high cost</span>
-        </label>
+          <label class="check">
+            <input type="checkbox" name="barriers[]" value="uncertainty on roi" />
+            <span>uncertainty on roi</span>
+          </label>
 
-        <label class="check">
-          <input type="checkbox" name="barriers[]" value="uncertainty on roi">
-          <span>uncertainty on roi</span>
-        </label>
+          <label class="check">
+            <input type="checkbox" name="barriers[]" value="data and privacy concerns" />
+            <span>data and privacy concerns</span>
+          </label>
 
-        <label class="check">
-          <input type="checkbox" name="barriers[]" value="data and privacy concerns">
-          <span>data and privacy concerns</span>
-        </label>
+          <label class="check">
+            <input type="checkbox" name="barriers[]" value="just dont see the value" />
+            <span>just don’t see the value</span>
+          </label>
+        </fieldset>
 
-        <label class="check">
-          <input type="checkbox" name="barriers[]" value="just dont see the value">
-          <span>just don’t see the value</span>
-        </label>
-      </fieldset>
+        <label for="message">message</label>
+        <textarea id="message" name="message" rows="6" required></textarea>
 
-      <label>message</label>
-      <textarea name="message" rows="5" required></textarea>
+        <div class="form-actions">
+          <button type="submit" class="cta-button">send message</button>
+          <a href="index.html" class="text-link">back to home</a>
+        </div>
+      </form>
+    </section>
+  </main>
 
-      <button type="submit" class="cta-button">send message</button>
-    </form>
+  <script>
+    async function submitForm(event) {
+      event.preventDefault();
 
-    <p class="back-link">
-      <a href="index.html" style="color:white; text-decoration:none;">back to agentic</a>
-    </p>
+      const form = document.getElementById("contactForm");
+      const formData = new FormData(form);
+      const data = {
+        name: formData.get("name"),
+        email: formData.get("email"),
+        message: formData.get("message"),
+        barriers: formData.getAll("barriers[]")
+      };
 
-  </div>
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data)
+      });
 
-<script>
-async function submitForm(event) {
-  event.preventDefault();
-
-  const form = document.getElementById("contactForm");
-  const data = Object.fromEntries(new FormData(form).entries());
-
-  const response = await fetch("/api/contact", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(data)
-  });
-
-  if (response.ok) {
-    form.classList.add("hidden");
-    document.getElementById("thankyou").classList.remove("hidden");
-  } else {
-    alert("something went wrong. please try again.");
-  }
-}
-</script>
-
+      if (response.ok) {
+        form.classList.add("hidden");
+        document.getElementById("thankyou").classList.remove("hidden");
+      } else {
+        alert("something went wrong. please try again.");
+      }
+    }
+  </script>
 </body>
 </html>
-``
