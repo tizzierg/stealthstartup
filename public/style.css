@@ -1255,66 +1255,72 @@ body.landing .insight {
   }
 
   body.landing .site-header {
-    padding-top: 0.45rem;
+    padding-top: 0.4rem;
+    padding-bottom: 0.15rem;
     align-items: center;
   }
 
   body.landing .brand {
-    font-size: 1.95rem;
+    font-size: 1.78rem;
     line-height: 1;
   }
 
   body.landing .hero {
-    padding: 14px 0 8px;
-    gap: 0.6rem;
+    padding: 10px 0 6px;
+    gap: 0.45rem;
   }
 
   body.landing .eyebrow {
-    margin: 0 0 0.35rem;
-    font-size: 0.68rem;
-    letter-spacing: 0.1em;
+    margin: 0 0 0.3rem;
+    font-size: 0.7rem;
+    letter-spacing: 0.09em;
+    color: rgba(26, 26, 26, 0.72);
   }
 
   body.landing .title {
-    font-size: clamp(36px, 10.8vw, 50px);
-    line-height: 0.94;
-    letter-spacing: -0.02em;
-    margin-bottom: 0.5rem;
+    font-size: clamp(33px, 9.9vw, 44px);
+    line-height: 0.96;
+    letter-spacing: -0.015em;
+    margin-bottom: 0.45rem;
+    max-width: 12ch;
   }
 
   body.landing .tagline {
     margin-top: 0.35rem;
     margin-bottom: 0;
-    max-width: 34ch;
+    max-width: 36ch;
     font-size: 1rem;
-    line-height: 1.58;
+    line-height: 1.6;
+    color: rgba(26, 26, 26, 0.78);
   }
 
   body.landing .hero-actions {
-    margin-top: 0.85rem;
+    margin-top: 0.72rem;
     margin-bottom: 0;
   }
 
   body.landing .hero .cta-button {
     min-height: 3.05rem;
-    padding: 0.78rem 1.1rem;
+    width: auto;
+    padding: 0.74rem 1.05rem;
     font-size: 0.75rem;
     letter-spacing: 0.12em;
   }
 
   body.landing .metrics {
-    gap: 0.7rem;
-    margin-bottom: 0.5rem;
-    padding-top: 0.6rem;
+    gap: 0.45rem;
+    margin-bottom: 0.25rem;
+    padding-top: 0.45rem;
     padding-bottom: 0.2rem;
   }
 
   body.landing .metric {
-    padding: 0.45rem 0;
+    padding: 0.5rem 0;
   }
 
   body.landing .metric + .metric {
-    border-top: 1px solid rgba(26, 26, 26, 0.1);
+    border-top: 1px solid rgba(26, 26, 26, 0.08);
+    margin-top: 0.08rem;
   }
 
   body.landing .section-green {
@@ -1355,11 +1361,21 @@ body.landing .insight {
   }
 
   body.landing .title {
-    font-size: clamp(32px, 12.2vw, 42px);
+    font-size: clamp(31px, 11.8vw, 39px);
   }
 
   body.landing .hero {
-    padding: 10px 0 6px;
+    padding: 8px 0 4px;
+  }
+
+  body.landing .tagline {
+    max-width: 100%;
+    font-size: 0.97rem;
+  }
+
+  body.landing .hero .cta-button {
+    min-height: 2.9rem;
+    font-size: 0.73rem;
   }
 
   body.landing .section-green {
