@@ -1247,3 +1247,119 @@ body.landing .insight {
   display: block;
   color: #F8F5EF;
 }
+
+/* Final landing mobile polish pass */
+@media (max-width: 900px) {
+  body.landing .site-header {
+    padding-top: 0.45rem;
+    align-items: center;
+  }
+
+  body.landing .brand {
+    font-size: 1.95rem;
+    line-height: 1;
+  }
+
+  body.landing .hero {
+    padding: 14px 0 8px;
+    gap: 0.6rem;
+  }
+
+  body.landing .eyebrow {
+    margin: 0 0 0.35rem;
+    font-size: 0.68rem;
+    letter-spacing: 0.1em;
+  }
+
+  body.landing .title {
+    font-size: clamp(36px, 10.8vw, 50px);
+    line-height: 0.94;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+  }
+
+  body.landing .tagline {
+    margin-top: 0.35rem;
+    margin-bottom: 0;
+    max-width: 34ch;
+    font-size: 1rem;
+    line-height: 1.58;
+  }
+
+  body.landing .hero-actions {
+    margin-top: 0.85rem;
+    margin-bottom: 0;
+  }
+
+  body.landing .hero .cta-button {
+    min-height: 3.05rem;
+    padding: 0.78rem 1.1rem;
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+  }
+
+  body.landing .metrics {
+    gap: 0.7rem;
+    margin-bottom: 0.5rem;
+    padding-top: 0.6rem;
+    padding-bottom: 0.2rem;
+  }
+
+  body.landing .metric {
+    padding: 0.45rem 0;
+  }
+
+  body.landing .metric + .metric {
+    border-top: 1px solid rgba(26, 26, 26, 0.1);
+  }
+
+  body.landing .section-green {
+    padding: 28px 0 34px;
+  }
+
+  body.landing .main-heading {
+    margin-bottom: 0.55rem;
+  }
+
+  body.landing .lead {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    line-height: 1.58;
+  }
+
+  body.landing .insight-grid {
+    margin-top: 0.9rem;
+    margin-bottom: 14px;
+    row-gap: 16px;
+  }
+
+  body.landing .cta-strip {
+    margin-top: 0.8rem;
+    padding-top: 30px;
+    padding-bottom: 34px;
+  }
+
+  body.landing .cta-strip p {
+    margin-bottom: 0.7rem;
+  }
+}
+
+@media (max-width: 430px) {
+  body.landing .title {
+    font-size: clamp(32px, 12.2vw, 42px);
+  }
+
+  body.landing .hero {
+    padding: 10px 0 6px;
+  }
+
+  body.landing .section-green {
+    padding: 24px 0 30px;
+  }
+
+  body.landing .cta-strip {
+    margin-top: 0.55rem;
+    padding-top: 26px;
+    padding-bottom: 30px;
+  }
+}
