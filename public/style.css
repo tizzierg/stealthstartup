@@ -1369,7 +1369,8 @@ body.landing .insight {
 
   body.landing .mobile-points {
     display: block;
-    margin: 0 0 1.2rem;
+    margin: 0 0 0.75rem;
+    padding: 0.35rem 0 0.75rem;
   }
 
   body.landing .mobile-points ul {
@@ -1430,7 +1431,7 @@ body.landing .insight {
   }
 
   body.landing .container {
-    width: min(calc(100% - 0.9rem), var(--container));
+    width: min(calc(100% - 1.4rem), var(--container));
   }
 
   body.landing .site-header {
@@ -1465,6 +1466,14 @@ body.landing .insight {
   body.landing .hero-copy {
     width: min(100%, 680px);
     max-width: 100%;
+    margin-inline: auto;
+  }
+
+  body.landing .title,
+  body.landing .tagline,
+  body.landing .lead,
+  body.landing .mobile-points li {
+    max-width: 32ch;
     margin-inline: auto;
   }
 
@@ -1575,7 +1584,7 @@ body.landing .insight {
 
 @media (max-width: 430px) {
   body.landing .container {
-    width: min(calc(100% - 0.7rem), var(--container));
+    width: min(calc(100% - 1.1rem), var(--container));
   }
 
   body.landing .site-header {
@@ -1599,7 +1608,8 @@ body.landing .insight {
   }
 
   body.landing .mobile-points {
-    margin-bottom: 1rem;
+    margin-bottom: 0.6rem;
+    padding-top: 0.2rem;
   }
 
   body.landing .mobile-points ul {
