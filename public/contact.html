@@ -38,8 +38,12 @@
 
     <section class="contact-panel">
       <div id="thankyou" class="thankyou hidden">
+        <svg class="thankyou-line" viewBox="0 0 320 48" fill="none" role="presentation" aria-hidden="true">
+          <path d="M4 31C33 31 33 17 62 17C91 17 91 31 120 31C149 31 149 17 178 17C207 17 207 31 236 31C265 31 265 17 294 17C307 17 314 20 316 21" />
+          <path d="M4 36C33 36 33 24 62 24C91 24 91 36 120 36C149 36 149 24 178 24C207 24 207 36 236 36C265 36 265 24 294 24C307 24 314 26 316 27" />
+        </svg>
         <h2>thank you.</h2>
-        <p>Max or Tizzie will be in touch shortly.</p>
+        <p class="thankyou-copy">someone from our team will be in touch shortly.</p>
       </div>
 
       <form action="/api/contact" method="POST" id="contactForm" onsubmit="submitForm(event)">
@@ -156,10 +160,12 @@
       if (response.ok) {
         form.classList.add("hidden");
         document.getElementById("thankyou").classList.remove("hidden");
+        document.body.classList.add("submission-complete");
       } else {
         alert("something went wrong. please try again.");
       }
     }
+
   </script>
 </body>
 </html>
