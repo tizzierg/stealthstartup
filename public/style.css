@@ -251,7 +251,12 @@ small,
   margin-top: 2rem;
 }
 
-.mobile-bridge {
+.mobile-bridge,
+.hero-stem {
+  display: none;
+}
+
+.mobile-points {
   display: none;
 }
 
@@ -1336,19 +1341,61 @@ body.landing .insight {
     display: none;
   }
 
-  body.landing .mobile-bridge {
-    display: grid;
-    place-items: center;
-    padding: 0.2rem 0 1rem;
+  body.landing .mobile-points {
+    display: block;
+    margin: 0 0 1.2rem;
   }
 
-  body.landing .mobile-bridge .bridge-graphic {
+  body.landing .mobile-points ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: 0.9rem;
+    width: min(100%, 560px);
+    margin-inline: auto;
+  }
+
+  body.landing .mobile-points li {
+    position: relative;
+    padding-left: 1rem;
+  }
+
+  body.landing .mobile-points li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.55rem;
+    width: 0.33rem;
+    height: 0.33rem;
+    border-radius: 50%;
+    background: rgba(35, 50, 71, 0.55);
+  }
+
+  body.landing .mobile-points .point-title {
+    margin: 0;
+    font-size: 0.68rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(35, 50, 71, 0.72);
+  }
+
+  body.landing .mobile-points p {
+    margin: 0.2rem 0 0;
+    font-size: 0.94rem;
+    line-height: 1.55;
+    color: rgba(35, 50, 71, 0.88);
+  }
+
+  body.landing .hero-stem {
+    display: block;
     width: min(100%, 320px);
     height: auto;
     opacity: 0.72;
+    margin: 0.25rem auto 0.9rem;
   }
 
-  body.landing .mobile-bridge .bridge-graphic path {
+  body.landing .hero-stem path {
     stroke: rgba(35, 50, 71, 0.34);
     stroke-width: 1.15;
     stroke-linecap: round;
@@ -1523,12 +1570,21 @@ body.landing .insight {
     padding: 30px 0 18px;
   }
 
-  body.landing .mobile-bridge {
-    padding: 0.2rem 0 0.85rem;
+  body.landing .mobile-points {
+    margin-bottom: 1rem;
   }
 
-  body.landing .mobile-bridge .bridge-graphic {
+  body.landing .mobile-points ul {
+    gap: 0.78rem;
+  }
+
+  body.landing .mobile-points p {
+    font-size: 0.9rem;
+  }
+
+  body.landing .hero-stem {
     width: min(100%, 290px);
+    margin: 0.2rem auto 0.8rem;
   }
 
   body.landing .tagline {
