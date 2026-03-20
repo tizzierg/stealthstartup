@@ -637,8 +637,8 @@ body.contact-page .site-footer {
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  gap: 0.12rem;
-  line-height: 1.15;
+  gap: 0.05rem;
+  line-height: 1.08;
 }
 
 form {
@@ -1560,8 +1560,8 @@ body.landing .insight {
   }
 
   body.contact-page .site-footer {
-    gap: 0.06rem;
-    line-height: 1.12;
+    gap: 0.03rem;
+    line-height: 1.05;
   }
 }
 
@@ -1610,31 +1610,36 @@ body.landing .insight {
     transform: translateY(-1px);
   }
 
-  body.js-ready .scroll-reveal {
-    opacity: 0;
-    transform: translateY(10px);
-    transition:
-      opacity 520ms var(--ease-smooth),
-      transform 520ms var(--ease-smooth);
-    will-change: opacity, transform;
-  }
-
-  body.js-ready .scroll-reveal.is-visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  body.js-ready .site-footer.scroll-reveal,
-  body.js-ready .site-footer.scroll-reveal.is-visible {
-    opacity: 1;
-    transform: none;
-  }
-
   body.landing .tagline,
   body.landing .lead,
   body.contact-page .contact-intro {
     line-height: 1.64;
   }
+}
+
+body.js-ready .scroll-reveal {
+  opacity: 0;
+  transform: translateY(14px) scale(0.99);
+  transition:
+    opacity 560ms var(--ease-smooth),
+    transform 560ms var(--ease-smooth);
+  will-change: opacity, transform;
+}
+
+body.js-ready .scroll-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+body.js-ready .section-green.scroll-reveal {
+  transform: translateY(18px) scale(0.99);
+  transition-duration: 680ms;
+}
+
+body.js-ready .site-footer.scroll-reveal,
+body.js-ready .site-footer.scroll-reveal.is-visible {
+  opacity: 1;
+  transform: none;
 }
 
 @media (prefers-reduced-motion: reduce) {
