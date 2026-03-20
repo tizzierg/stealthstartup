@@ -167,6 +167,7 @@ label,
 .site-nav a {
   font-size: 0.88rem;
   letter-spacing: 0.14em;
+  text-transform: lowercase;
 }
 
 .header-biline {
@@ -248,6 +249,10 @@ small,
   align-items: center;
   gap: 1rem;
   margin-top: 2rem;
+}
+
+.mobile-bridge {
+  display: none;
 }
 
 .cta-button {
@@ -629,6 +634,9 @@ body.contact-page .site-footer p {
 }
 
 body.contact-page .site-footer {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
   gap: 0.12rem;
   line-height: 1.15;
 }
@@ -1328,6 +1336,24 @@ body.landing .insight {
     display: none;
   }
 
+  body.landing .mobile-bridge {
+    display: grid;
+    place-items: center;
+    padding: 0.2rem 0 1rem;
+  }
+
+  body.landing .mobile-bridge .bridge-graphic {
+    width: min(100%, 320px);
+    height: auto;
+    opacity: 0.72;
+  }
+
+  body.landing .mobile-bridge .bridge-graphic path {
+    stroke: rgba(35, 50, 71, 0.34);
+    stroke-width: 1.15;
+    stroke-linecap: round;
+  }
+
   body.landing .container {
     width: min(calc(100% - 0.9rem), var(--container));
   }
@@ -1495,6 +1521,14 @@ body.landing .insight {
 
   body.landing .hero {
     padding: 30px 0 18px;
+  }
+
+  body.landing .mobile-bridge {
+    padding: 0.2rem 0 0.85rem;
+  }
+
+  body.landing .mobile-bridge .bridge-graphic {
+    width: min(100%, 290px);
   }
 
   body.landing .tagline {
