@@ -2,10 +2,10 @@
   --color-cream: #faf8f5;
   --color-cream-dark: #f5f0e8;
   --color-paper: #fffdf9;
-  --color-charcoal: #2d2d2d;
-  --color-charcoal-light: #4a4a4a;
+  --color-charcoal: #2a3646;
+  --color-charcoal-light: #435267;
   --color-warm-gray: #8a8580;
-  --color-ink: #1a1a1a;
+  --color-ink: #233247;
   --color-green: #6f8f5f;
   --color-green-light: #8ba67c;
   --color-green-soft: #dce7d5;
@@ -1297,6 +1297,10 @@ body.landing .insight {
 
 /* Final landing mobile polish pass */
 @media (max-width: 900px) {
+  body.landing .metrics {
+    display: none;
+  }
+
   body.landing .container {
     width: min(calc(100% - 0.9rem), var(--container));
   }
