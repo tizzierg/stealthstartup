@@ -131,7 +131,7 @@ h3 {
 }
 
 .brand {
-  font-size: 2.35rem;
+  font-size: 2.65rem;
   font-weight: 600;
   letter-spacing: -0.03em;
   color: var(--color-ink);
@@ -162,6 +162,15 @@ label,
   font-family: "Source Sans 3", "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
   color: var(--color-charcoal-light);
   transition: color 0.3s ease;
+}
+
+.site-nav a {
+  font-size: 0.88rem;
+  letter-spacing: 0.14em;
+}
+
+.header-biline {
+  display: none;
 }
 
 .site-nav a,
@@ -727,6 +736,33 @@ body.landing .site-footer p {
   color: var(--color-green-deep);
 }
 
+body.landing .site-header {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  flex-wrap: wrap;
+  row-gap: 0.15rem;
+  background: rgba(255, 253, 249, 0.92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(26, 26, 26, 0.08);
+  padding-bottom: 0.4rem;
+}
+
+body.landing .header-biline {
+  display: block;
+  flex-basis: 100%;
+  margin: 0;
+  font-family: "Source Sans 3", "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.74rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(26, 26, 26, 0.72);
+}
+
+body.landing .hero .eyebrow {
+  display: none;
+}
+
 /* Final landing band system: full-width green across middle sections only. */
 body.landing .section-green {
   position: relative;
@@ -1260,9 +1296,19 @@ body.landing .insight {
     align-items: center;
   }
 
+  body.landing .header-biline {
+    font-size: 0.66rem;
+    letter-spacing: 0.07em;
+  }
+
   body.landing .brand {
-    font-size: 1.78rem;
+    font-size: 2.08rem;
     line-height: 1;
+  }
+
+  body.landing .site-nav a {
+    font-size: 0.8rem;
+    letter-spacing: 0.13em;
   }
 
   body.landing .hero {
@@ -1380,6 +1426,14 @@ body.landing .insight {
 
   body.landing .title {
     font-size: clamp(31px, 11.8vw, 39px);
+  }
+
+  body.landing .brand {
+    font-size: 1.95rem;
+  }
+
+  body.landing .site-nav a {
+    font-size: 0.77rem;
   }
 
   body.landing .hero {
