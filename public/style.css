@@ -1346,7 +1346,7 @@ body.landing .insight {
     font-size: clamp(33px, 9.9vw, 44px);
     line-height: 0.96;
     letter-spacing: -0.015em;
-    margin-bottom: 0.45rem;
+    margin-bottom: 0.62rem;
     max-width: none;
     width: 100%;
   }
@@ -1361,7 +1361,7 @@ body.landing .insight {
   }
 
   body.landing .hero-actions {
-    margin-top: 0.72rem;
+    margin-top: 0.98rem;
     margin-bottom: 0;
     justify-content: center;
     width: 100%;
@@ -1378,7 +1378,7 @@ body.landing .insight {
   body.landing .metrics {
     gap: 0.45rem;
     margin-bottom: 0.25rem;
-    margin-top: 0.7rem;
+    margin-top: 0.5rem;
     padding-top: 0.8rem;
     padding-bottom: 0.2rem;
     border-top: 0;
@@ -1396,22 +1396,35 @@ body.landing .insight {
 
   body.landing .section-green {
     padding: 28px 0 34px;
+    text-align: center;
   }
 
   body.landing .main-heading {
     margin-bottom: 0.55rem;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   body.landing .lead {
     margin-top: 0.5rem;
     font-size: 1rem;
     line-height: 1.58;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   body.landing .insight-grid {
     margin-top: 0.9rem;
     margin-bottom: 14px;
     row-gap: 16px;
+  }
+
+  body.landing .section-green .insight,
+  body.landing .section-green .insight h3,
+  body.landing .section-green .insight-title,
+  body.landing .section-green .insight-body,
+  body.landing .section-green .insight p {
+    text-align: center;
   }
 
   body.landing .cta-strip {
@@ -1451,9 +1464,17 @@ body.landing .insight {
     padding: 20px 0 6px;
   }
 
+  body.landing .hero-actions {
+    margin-top: 0.88rem;
+  }
+
   body.landing .tagline {
     max-width: 98%;
     font-size: 0.97rem;
+  }
+
+  body.landing .metrics {
+    margin-top: 0.42rem;
   }
 
   body.landing .hero .cta-button {
