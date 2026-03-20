@@ -212,7 +212,7 @@ small,
   grid-template-columns: minmax(0, 1fr);
   gap: 1.5rem;
   align-items: start;
-  padding: 3rem 0 2rem;
+  padding: 3.8rem 0 2.8rem;
 }
 
 .hero-copy {
@@ -1355,7 +1355,7 @@ body.landing .insight {
   }
 
   body.landing .hero {
-    padding: 32px 0 18px;
+    padding: 40px 0 24px;
     gap: 0.45rem;
     justify-items: center;
     text-align: center;
@@ -1375,7 +1375,7 @@ body.landing .insight {
   }
 
   body.landing .title {
-    font-size: clamp(33px, 9.9vw, 44px);
+    font-size: clamp(36px, 10.8vw, 48px);
     line-height: 0.96;
     letter-spacing: -0.015em;
     margin-bottom: 0.62rem;
@@ -1494,7 +1494,7 @@ body.landing .insight {
   }
 
   body.landing .hero {
-    padding: 24px 0 14px;
+    padding: 30px 0 18px;
   }
 
   body.landing .tagline {
@@ -1588,6 +1588,12 @@ body.landing .insight {
   body.js-ready .scroll-reveal.is-visible {
     opacity: 1;
     transform: translateY(0);
+  }
+
+  body.js-ready .site-footer.scroll-reveal,
+  body.js-ready .site-footer.scroll-reveal.is-visible {
+    opacity: 1;
+    transform: none;
   }
 
   body.landing .tagline,
