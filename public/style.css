@@ -153,7 +153,7 @@ label,
 .text-link {
   font-size: 0.78rem;
   letter-spacing: 0.16em;
-  text-transform: uppercase;
+  text-transform: lowercase;
 }
 
 .site-nav a,
@@ -168,6 +168,23 @@ label,
   font-size: 0.88rem;
   letter-spacing: 0.14em;
   text-transform: lowercase;
+}
+
+body :where(p, a, span, small, label, legend, li, button) {
+  text-transform: lowercase;
+}
+
+h1,
+h2,
+h3,
+.title,
+.main-heading,
+.section-heading h2 {
+  text-transform: none;
+}
+
+.preserve-case {
+  text-transform: none !important;
 }
 
 .header-biline {
@@ -646,6 +663,23 @@ body.contact-page .site-footer {
   gap: 0.02rem;
   line-height: 1.04;
   padding-top: 0.7rem;
+}
+
+@media (min-width: 901px) {
+  body.contact-page .site-footer {
+    padding-top: 1.25rem;
+  }
+}
+
+@media (min-width: 981px) {
+  body.contact-page .contact-layout {
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.08fr);
+    gap: 1.35rem;
+  }
+
+  body.contact-page .contact-copy {
+    max-width: 44ch;
+  }
 }
 
 body.contact-page.submission-complete .contact-panel {
