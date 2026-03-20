@@ -1251,7 +1251,7 @@ body.landing .insight {
 /* Final landing mobile polish pass */
 @media (max-width: 900px) {
   body.landing .container {
-    width: min(calc(100% - 1.25rem), var(--container));
+    width: min(calc(100% - 0.9rem), var(--container));
   }
 
   body.landing .site-header {
@@ -1268,6 +1268,14 @@ body.landing .insight {
   body.landing .hero {
     padding: 10px 0 6px;
     gap: 0.45rem;
+    justify-items: center;
+    text-align: center;
+  }
+
+  body.landing .hero-copy {
+    width: min(100%, 680px);
+    max-width: 100%;
+    margin-inline: auto;
   }
 
   body.landing .eyebrow {
@@ -1282,13 +1290,14 @@ body.landing .insight {
     line-height: 0.96;
     letter-spacing: -0.015em;
     margin-bottom: 0.45rem;
-    max-width: 12ch;
+    max-width: none;
+    width: 100%;
   }
 
   body.landing .tagline {
     margin-top: 0.35rem;
     margin-bottom: 0;
-    max-width: 36ch;
+    max-width: 100%;
     font-size: 1rem;
     line-height: 1.6;
     color: rgba(26, 26, 26, 0.78);
@@ -1297,11 +1306,13 @@ body.landing .insight {
   body.landing .hero-actions {
     margin-top: 0.72rem;
     margin-bottom: 0;
+    justify-content: center;
+    width: 100%;
   }
 
   body.landing .hero .cta-button {
     min-height: 3.05rem;
-    width: auto;
+    width: min(100%, 280px);
     padding: 0.74rem 1.05rem;
     font-size: 0.75rem;
     letter-spacing: 0.12em;
@@ -1310,12 +1321,15 @@ body.landing .insight {
   body.landing .metrics {
     gap: 0.45rem;
     margin-bottom: 0.25rem;
-    padding-top: 0.45rem;
+    margin-top: 0.7rem;
+    padding-top: 0.8rem;
     padding-bottom: 0.2rem;
+    border-top: 1px solid rgba(26, 26, 26, 0.1);
   }
 
   body.landing .metric {
     padding: 0.5rem 0;
+    text-align: center;
   }
 
   body.landing .metric + .metric {
@@ -1343,9 +1357,13 @@ body.landing .insight {
     row-gap: 16px;
   }
 
+  body.landing .cta-strip {
+    margin-bottom: 1rem;
+  }
+
   body.landing .site-footer {
     gap: 0.12rem;
-    padding-top: 0.6rem;
+    padding-top: 0.25rem;
     padding-bottom: 0.9rem;
     line-height: 1.2;
   }
@@ -1357,7 +1375,7 @@ body.landing .insight {
 
 @media (max-width: 430px) {
   body.landing .container {
-    width: min(calc(100% - 0.9rem), var(--container));
+    width: min(calc(100% - 0.7rem), var(--container));
   }
 
   body.landing .title {
@@ -1369,7 +1387,7 @@ body.landing .insight {
   }
 
   body.landing .tagline {
-    max-width: 100%;
+    max-width: 98%;
     font-size: 0.97rem;
   }
 
@@ -1382,8 +1400,13 @@ body.landing .insight {
     padding: 24px 0 30px;
   }
 
+  body.landing .cta-strip {
+    margin-bottom: 0.7rem;
+  }
+
   body.landing .site-footer {
     gap: 0.08rem;
+    padding-top: 0.15rem;
     padding-bottom: 0.75rem;
   }
 }
