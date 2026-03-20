@@ -1530,3 +1530,85 @@ body.landing .insight {
     line-height: 1.12;
   }
 }
+
+@media (max-width: 900px) {
+  body.landing .site-header,
+  body.contact-page .site-header {
+    transition:
+      padding 220ms var(--ease-smooth),
+      row-gap 220ms var(--ease-smooth),
+      background 220ms var(--ease-smooth),
+      backdrop-filter 220ms var(--ease-smooth);
+  }
+
+  body.landing .brand,
+  body.contact-page .brand,
+  body.landing .site-nav a,
+  body.contact-page .site-nav a,
+  body.landing .header-biline {
+    transition:
+      transform 220ms var(--ease-smooth),
+      opacity 220ms var(--ease-smooth),
+      font-size 220ms var(--ease-smooth);
+  }
+
+  body.is-scrolled.landing .site-header,
+  body.is-scrolled.contact-page .site-header {
+    padding-top: 0.22rem;
+    padding-bottom: 0.08rem;
+    row-gap: 0.08rem;
+    background: rgba(255, 253, 249, 0.96);
+  }
+
+  body.is-scrolled.landing .brand,
+  body.is-scrolled.contact-page .brand {
+    transform: scale(0.94);
+    transform-origin: left center;
+  }
+
+  body.is-scrolled.landing .site-nav a,
+  body.is-scrolled.contact-page .site-nav a {
+    transform: translateY(-0.5px);
+  }
+
+  body.is-scrolled.landing .header-biline {
+    opacity: 0.72;
+    transform: translateY(-1px);
+  }
+
+  body.js-ready .scroll-reveal {
+    opacity: 0;
+    transform: translateY(10px);
+    transition:
+      opacity 520ms var(--ease-smooth),
+      transform 520ms var(--ease-smooth);
+    will-change: opacity, transform;
+  }
+
+  body.js-ready .scroll-reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  body.landing .tagline,
+  body.landing .lead,
+  body.contact-page .contact-intro {
+    line-height: 1.64;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.js-ready .scroll-reveal,
+  body.js-ready .scroll-reveal.is-visible,
+  body.landing .site-header,
+  body.contact-page .site-header,
+  body.landing .brand,
+  body.contact-page .brand,
+  body.landing .site-nav a,
+  body.contact-page .site-nav a,
+  body.landing .header-biline {
+    transition: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+}
