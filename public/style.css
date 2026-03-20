@@ -678,7 +678,19 @@ body.contact-page .site-footer {
   }
 
   body.contact-page .contact-copy {
-    max-width: 44ch;
+    max-width: 55ch;
+  }
+
+  body.contact-page .title {
+    font-size: clamp(2.7rem, 3.8vw, 3.8rem);
+    max-width: 15ch;
+    line-height: 0.98;
+  }
+
+  body.contact-page .contact-intro {
+    max-width: 55ch;
+    font-size: 1.08rem;
+    line-height: 1.6;
   }
 }
 
