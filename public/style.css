@@ -804,13 +804,20 @@ body.landing .insight {
     width: min(calc(100% - 1.5rem), var(--container));
   }
 
-  .site-header,
   .site-footer {
     flex-direction: column;
     align-items: flex-start;
   }
 
+  .site-header {
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+
   .site-nav {
+    margin-left: auto;
+    flex-wrap: nowrap;
     gap: 0.85rem 1rem;
   }
 
@@ -852,7 +859,8 @@ body.landing .insight {
   }
 
   .site-nav {
-    width: 100%;
+    margin-left: auto;
+    width: auto;
     gap: 0.55rem 0.9rem;
   }
 
@@ -1060,9 +1068,22 @@ body.landing .insight {
     padding-top: 96px;
   }
 
+  body.landing .hero {
+    padding: 56px 0 14px;
+    gap: 0.85rem;
+  }
+
+  body.landing .hero-actions {
+    margin-top: 0.9rem;
+  }
+
   /* Global section rhythm */
   section {
     padding: 72px 0;
+  }
+
+  body.landing section {
+    padding: 40px 0;
   }
 
   /* HERO (avoid 3-4 line wraps) */
@@ -1096,6 +1117,12 @@ body.landing .insight {
     box-shadow: none;
   }
 
+  body.landing .metrics {
+    margin-bottom: 0.9rem;
+    padding-top: 14px;
+    padding-bottom: 10px;
+  }
+
   .metric .metric-label {
     display: block;
     margin-bottom: 4px;
@@ -1104,6 +1131,10 @@ body.landing .insight {
   /* GREEN BAND (your three insights stack cleanly) */
   .section-green {
     padding: 84px 0;
+  }
+
+  body.landing .section-green {
+    padding: 44px 0 48px;
   }
 
   .section-green .insight-grid {
@@ -1150,6 +1181,24 @@ body.landing .insight {
 @media (max-width: 400px) {
   .section-green {
     padding: 72px 0;
+  }
+
+  body.landing .hero {
+    padding: 48px 0 12px;
+  }
+
+  body.landing .hero-actions {
+    margin-top: 0.75rem;
+  }
+
+  body.landing .metrics {
+    margin-bottom: 0.7rem;
+    padding-top: 10px;
+    padding-bottom: 8px;
+  }
+
+  body.landing .section-green {
+    padding: 38px 0 42px;
   }
 
   .main-heading {
