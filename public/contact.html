@@ -60,7 +60,6 @@
 
         <fieldset class="group">
           <legend>what has slowed down your OpenClaw or on-site AI rollout?</legend>
-
           <label class="check">
             <input type="checkbox" name="barriers[]" value="lack of expertise" />
             <span>lack of expertise</span>
@@ -73,9 +72,8 @@
 
           <label class="check">
             <input type="checkbox" name="barriers[]" value="uncertainty on roi" />
-            <span>uncertainty on roi</span>
+            <span>uncertainty on ROI</span>
           </label>
-
           <label class="check">
             <input type="checkbox" name="barriers[]" value="data and privacy concerns" />
             <span>data and privacy concerns</span>
@@ -101,7 +99,6 @@
   <script>
     async function submitForm(event) {
       event.preventDefault();
-
       const form = document.getElementById("contactForm");
       const formData = new FormData(form);
       const data = {
