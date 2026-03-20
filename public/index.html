@@ -54,7 +54,7 @@
         </li>
         <li>
           <p class="point-title">practical</p>
-          <p>Built for day-to-day use, not demos.</p>
+          <p>Built for daily use, not demos.</p>
         </li>
       </ul>
     </section>
@@ -70,7 +70,7 @@
       </div>
       <div class="metric">
         <span class="metric-label">practical</span>
-        <p>Built for day-to-day use, not demos.</p>
+        <p>Built for daily use, not demos.</p>
       </div>
     </section>
 
@@ -123,11 +123,13 @@
   <script>
     (function () {
       const body = document.body;
+      const root = document.documentElement;
       const header = document.querySelector(".site-header");
       if (!header) return;
 
       const updateHeaderState = function () {
         body.classList.toggle("is-scrolled", window.scrollY > 18);
+        root.classList.toggle("scrolled", window.scrollY > 4);
       };
 
       updateHeaderState();
@@ -166,6 +168,7 @@
       });
     })();
   </script>
+  <script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>
 

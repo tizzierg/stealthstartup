@@ -1905,3 +1905,125 @@ body.js-ready .site-footer.scroll-reveal.is-visible {
     opacity: 1 !important;
   }
 }
+
+@media (max-width: 900px) {
+  .metrics {
+    padding: 60px 0;
+  }
+
+  .metrics .metric {
+    margin: 0 0 28px 0;
+    padding: 0;
+    border: 0;
+    box-shadow: none;
+    background: transparent;
+  }
+
+  .metric .metric-label {
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    margin-bottom: 4px;
+    opacity: 0.8;
+  }
+
+  .metrics p {
+    font-size: 16px;
+    line-height: 1.55;
+    margin: 0;
+  }
+}
+
+@media (max-width: 900px) {
+  .hero {
+    padding-top: 100px;
+  }
+
+  .hero .title {
+    font-size: clamp(28px, 8vw, 36px);
+    line-height: 1.15;
+    max-width: 20ch;
+    margin-bottom: 16px;
+  }
+
+  .hero .tagline {
+    font-size: 16px;
+    line-height: 1.55;
+    max-width: 35ch;
+    margin-bottom: 24px;
+  }
+
+  .cta-button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 900px) {
+  .site-header {
+    padding: 14px 0;
+  }
+
+  .container {
+    width: min(100% - 1.75rem, 1080px);
+  }
+
+  .site-nav a {
+    font-size: 14px;
+    margin-left: 14px;
+  }
+}
+
+.scrolled .site-header {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+}
+
+.section-green [class*="card"] {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+.section-green .subtext {
+  font-size: 16px;
+  line-height: 1.55;
+  max-width: 38ch;
+  margin-bottom: 28px;
+  opacity: 0.92;
+}
+
+.section-green .divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.22);
+  margin: 28px 0;
+}
+
+@media (max-width: 900px) {
+  .section-green {
+    padding: 84px 0;
+  }
+
+  .section-green .insight-grid {
+    grid-template-columns: 1fr;
+    row-gap: 22px;
+  }
+
+  .section-green .insight h3 {
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    margin: 0 0 6px;
+    opacity: 0.9;
+  }
+
+  .section-green .insight-title {
+    font-size: 18px;
+    line-height: 1.35;
+    margin: 0 0 6px;
+  }
+
+  .section-green .insight p {
+    font-size: 15px;
+    line-height: 1.55;
+    margin: 0;
+    opacity: 0.9;
+  }
+}
