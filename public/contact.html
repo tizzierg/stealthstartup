@@ -105,7 +105,7 @@
       updateHeaderState();
       window.addEventListener("scroll", updateHeaderState, { passive: true });
 
-      const revealTargets = document.querySelectorAll(".contact-layout, .site-footer");
+      const revealTargets = document.querySelectorAll(".contact-layout");
       revealTargets.forEach(function (el) {
         el.classList.add("scroll-reveal");
       });
