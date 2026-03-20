@@ -2,10 +2,28 @@ const nodemailer = require("nodemailer");
 
 module.exports = async function handler(req, res) {
   if (req.method !== "POST") {
+    res.setHeader("Allow", "POST");
     return res.status(405).json({ message: "Method not allowed" });
   }
 
-  const { name, email, message, barriers } = req.body;
+  const { name, email, message, barriers } = req.body || {};
+
+  const trimmedName = typeof name === "string" ? name.trim() : "";
+  const trimmedEmail = typeof email === "string" ? email.trim() : "";
+  const trimmedMessage = typeof message === "string" ? message.trim() : "";
+  const normalizedBarriers = Array.isArray(barriers)
+    ? barriers.filter(Boolean)
+    : barriers
+      ? [barriers]
+      : [];
+
+  if (!trimmedName || !trimmedEmail || !trimmedMessage) {
+    return res.status(400).json({ message: "Missing required fields" });
+  }
+
+  if (!trimmedEmail.includes("@")) {
+    return res.status(400).json({ message: "Invalid email address" });
+  }
 
   try {
     const transporter = nodemailer.createTransport({
@@ -21,12 +39,12 @@ module.exports = async function handler(req, res) {
     await transporter.sendMail({
       from: process.env.FROM_EMAIL,
       to: process.env.TO_EMAIL,
-      subject: `New message from ${name}`,
+      subject: `New message from ${trimmedName}`,
       text: `
-Name: ${name}
-Email: ${email}
-Barriers: ${Array.isArray(barriers) ? barriers.join(", ") : barriers}
-Message: ${message}
+    Name: ${trimmedName}
+    Email: ${trimmedEmail}
+    Barriers: ${normalizedBarriers.length ? normalizedBarriers.join(", ") : "none provided"}
+    Message: ${trimmedMessage}
       `
     });
 

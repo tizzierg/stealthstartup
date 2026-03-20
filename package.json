@@ -1,10 +1,11 @@
 {
   "name": "stealthstartup",
   "version": "1.0.0",
-  "description": "AGENTIC website with Node backend",
+  "description": "Cultivate marketing site with contact API",
   "main": "server.js",
   "type": "commonjs",
   "scripts": {
+    "dev": "node server.js",
     "start": "node server.js"
   },
   "dependencies": {
