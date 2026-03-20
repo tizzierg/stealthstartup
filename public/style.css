@@ -576,7 +576,8 @@ small,
 body.contact-page .contact-layout {
   position: relative;
   isolation: isolate;
-  margin-top: 1.4rem;
+  margin-top: 1rem;
+  gap: 0.85rem;
 }
 
 body.contact-page .contact-layout::before {
@@ -642,8 +643,26 @@ body.contact-page .site-footer {
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  gap: 0.05rem;
-  line-height: 1.08;
+  gap: 0.02rem;
+  line-height: 1.04;
+}
+
+body.contact-page .site-footer p {
+  margin: 0;
+}
+
+body.contact-page label,
+body.contact-page .group legend,
+body.contact-page .check span,
+body.contact-page .cta-button {
+  text-transform: lowercase;
+  letter-spacing: 0.01em;
+}
+
+body.contact-page form,
+body.contact-page input,
+body.contact-page textarea {
+  text-transform: lowercase;
 }
 
 form {
@@ -1076,9 +1095,9 @@ body.landing .insight {
   }
 
   body.contact-page .contact-layout {
-    margin-top: 0.8rem;
-    padding: 2rem 0 1.6rem;
-    gap: 1.4rem;
+    margin-top: 0.55rem;
+    padding: 1.6rem 0 1.3rem;
+    gap: 0.95rem;
   }
 
   body.contact-page .contact-copy {
@@ -1354,20 +1373,22 @@ body.landing .insight {
     gap: 0.9rem;
     width: min(100%, 560px);
     margin-inline: auto;
+    justify-items: center;
   }
 
   body.landing .mobile-points li {
     position: relative;
-    padding-left: 1rem;
+    padding-left: 0;
+    text-align: center;
+    max-width: 34ch;
   }
 
   body.landing .mobile-points li::before {
     content: "";
-    position: absolute;
-    left: 0;
-    top: 0.55rem;
+    display: block;
     width: 0.33rem;
     height: 0.33rem;
+    margin: 0 auto 0.35rem;
     border-radius: 50%;
     background: rgba(35, 50, 71, 0.55);
   }
@@ -1616,8 +1637,8 @@ body.landing .insight {
   }
 
   body.contact-page .site-footer {
-    gap: 0.03rem;
-    line-height: 1.05;
+    gap: 0;
+    line-height: 1.02;
   }
 }
 
