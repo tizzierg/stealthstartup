@@ -668,7 +668,12 @@ body.contact-page.submission-complete,
 body.contact-page.submission-complete .contact-layout,
 body.contact-page.submission-complete .contact-layout::before,
 body.contact-page.submission-complete .contact-panel {
-  background: rgba(255, 253, 249, 0.92);
+  background: var(--color-paper);
+}
+
+body.contact-page.submission-complete .contact-layout::before,
+body.contact-page.submission-complete .contact-panel::before {
+  content: none;
 }
 
 body.contact-page.submission-complete .contact-layout {
@@ -912,13 +917,13 @@ body.landing .header-biline {
   font-family: "Source Sans 3", "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 0.74rem;
   letter-spacing: 0.08em;
-  text-transform: lowercase;
+  text-transform: none !important;
   color: rgba(26, 26, 26, 0.72);
 }
 
 body.landing .hero .eyebrow {
   display: none;
-  text-transform: lowercase;
+  text-transform: none !important;
 }
 
 /* Final landing band system: full-width green across middle sections only. */
@@ -1747,6 +1752,22 @@ body.landing .insight {
 }
 
 @media (max-width: 900px) {
+  body.landing .header-biline,
+  body.landing .hero .eyebrow {
+    text-transform: none;
+  }
+
+  body.contact-page.submission-complete,
+  body.contact-page.submission-complete .contact-layout,
+  body.contact-page.submission-complete .contact-panel {
+    background: var(--color-paper);
+  }
+
+  body.contact-page.submission-complete .contact-layout::before,
+  body.contact-page.submission-complete .contact-panel::before {
+    content: none;
+  }
+
   body.landing .site-header,
   body.contact-page .site-header {
     transition:
