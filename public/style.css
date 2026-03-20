@@ -1069,8 +1069,12 @@ body.landing .insight {
   }
 
   body.landing .hero {
-    padding: 56px 0 14px;
+    padding: 28px 0 10px;
     gap: 0.85rem;
+  }
+
+  body.landing .hero .eyebrow {
+    margin-bottom: 0.45rem;
   }
 
   body.landing .hero-actions {
@@ -1087,7 +1091,13 @@ body.landing .insight {
   }
 
   /* HERO (avoid 3-4 line wraps) */
-  .hero .title,
+  .hero .title {
+    font-size: clamp(34px, 11vw, 52px);
+    line-height: 0.96;
+    max-width: 13ch;
+    margin-bottom: 12px;
+  }
+
   .main-heading {
     font-size: clamp(26px, 7vw, 34px);
     line-height: 1.15;
@@ -1102,6 +1112,12 @@ body.landing .insight {
     line-height: 1.55;
     max-width: 38ch;
     margin-bottom: 28px;
+  }
+
+  .hero .tagline {
+    font-family: "Source Sans 3", "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 1.02rem;
+    line-height: 1.62;
   }
 
   /* METRICS (prevent tall gaps between local/private/practical) */
@@ -1184,7 +1200,7 @@ body.landing .insight {
   }
 
   body.landing .hero {
-    padding: 48px 0 12px;
+    padding: 22px 0 10px;
   }
 
   body.landing .hero-actions {
